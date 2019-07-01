@@ -2,8 +2,8 @@ package com.itheima.f_xml.b_setter;
 
 public class Address {
 	
-	private String addr;	//鍦板潃淇℃伅
-	private String tel;		//鐢佃瘽
+	private String addr;	//地址信息
+	private String tel;		//电话
 	
 	
 	public String getAddr() {

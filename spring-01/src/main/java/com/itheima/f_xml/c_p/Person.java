@@ -1,12 +1,14 @@
 package com.itheima.f_xml.c_p;
 
+import com.itheima.f_xml.b_setter.Address;
+
 public class Person {
 	
 	private String pname;
 	private Integer age;
 	
-	private Address homeAddr;		//瀹跺涵鍦板潃
-	private Address companyAddr;	//鍏徃鍦板潃
+    private Address homeAddr;       //家庭地址
+    private Address companyAddr;    //公司地址
 	public String getPname() {
 		return pname;
 	}

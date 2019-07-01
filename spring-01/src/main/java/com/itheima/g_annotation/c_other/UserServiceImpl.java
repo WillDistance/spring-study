@@ -17,11 +17,11 @@ public class UserServiceImpl implements UserService {
 	
 	@PostConstruct
 	public void myInit(){
-		System.out.println("åˆå§‹åŒ–");
+		System.out.println("³õÊ¼»¯");
 	}
 	@PreDestroy
 	public void myDestroy(){
-		System.out.println("é”€æ¯");
+		System.out.println("Ïú»Ù");
 	}
 
 }

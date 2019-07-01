@@ -3,7 +3,7 @@ package com.itheima.c_inject.b_static_factory;
 public class MyBeanFactory {
 	
 	/**
-	 * åˆ›å»ºå®žä¾‹
+	 * ´´½¨ÊµÀý
 	 * @return
 	 */
 	public static UserService createService(){

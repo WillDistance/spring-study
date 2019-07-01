@@ -8,10 +8,10 @@ public class CopyOfUserServiceImpl  {
 	}
 	
 	public void myInit(){
-		System.out.println("åˆå§‹åŒ– c");
+		System.out.println("³õÊ¼»¯ c");
 	}
 	public void myDestroy(){
-		System.out.println("é”€æ¯ c");
+		System.out.println("Ïú»Ù c");
 	}
 
 }

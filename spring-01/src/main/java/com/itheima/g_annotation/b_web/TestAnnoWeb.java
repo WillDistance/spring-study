@@ -8,7 +8,7 @@ public class TestAnnoWeb {
 	
 	@Test
 	public void demo02(){
-		//ä»Žspringå®¹å™¨èŽ·å¾—
+		//´ÓspringÈÝÆ÷»ñµÃ
 		String xmlPath = "com/itheima/g_annotation/b_web/beans.xml";
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		StudentAction studentAction = (StudentAction) applicationContext.getBean("studentActionId");

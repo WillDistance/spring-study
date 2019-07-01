@@ -12,7 +12,7 @@ public class TestDI {
 	
 	@Test
 	public void demo01(){
-		//ä»springå®¹å™¨è·å¾—  è§£æxmlæ–‡ä»¶çš„æ—¶å€™å°±å®ä¾‹åŒ–
+		//´ÓspringÈİÆ÷»ñµÃ  ½âÎöxmlÎÄ¼şµÄÊ±ºò¾ÍÊµÀı»¯
 		String xmlPath = "bean-config/b_di/beans.xml";
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		BookService bookService = (BookService) applicationContext.getBean("bookServiceId");
@@ -22,7 +22,7 @@ public class TestDI {
 	
 	@Test
 	public void demo02(){
-		//ä½¿ç”¨BeanFactory  --ç¬¬ä¸€æ¬¡è°ƒç”¨getBeanæ—¶å®ä¾‹åŒ–å¯¹è±¡
+		//Ê¹ÓÃBeanFactory  --µÚÒ»´Îµ÷ÓÃgetBeanÊ±ÊµÀı»¯¶ÔÏó
 		String xmlPath = "bean-config/b_di/beans.xml";
 		BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource(xmlPath));
 		BookService bookService = (BookService) beanFactory.getBean("bookServiceId");

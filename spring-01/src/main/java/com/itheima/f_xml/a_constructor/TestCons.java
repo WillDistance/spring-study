@@ -8,7 +8,7 @@ public class TestCons {
 	
 	@Test
 	public void demo02() throws Exception{
-		//spring å·¥åŽ‚
+		//spring ¹¤³§
 		String xmlPath = "com/itheima/f_xml/a_constructor/beans.xml";
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		User user = (User) applicationContext.getBean("userId");

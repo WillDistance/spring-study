@@ -12,7 +12,7 @@ public class TestSetter {
 	
 	@Test
 	public void demo01(){
-		//ä»Žspringå®¹å™¨èŽ·å¾—
+		//´ÓspringÈÝÆ÷»ñµÃ
 		String xmlPath = "com/itheima/f_xml/b_setter/beans.xml";
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		Person person = (Person) applicationContext.getBean("personId");

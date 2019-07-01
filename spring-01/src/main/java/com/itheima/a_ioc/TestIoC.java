@@ -8,7 +8,7 @@ public class TestIoC {
 	
 	@Test
 	public void demo01(){
-		//ä¹‹å‰å¼€å‘
+		//Ö®Ç°¿ª·¢
 		UserService userService = new UserServiceImpl();
 		userService.addUser();
 		
@@ -16,11 +16,11 @@ public class TestIoC {
 	
 	@Test
 	public void demo02(){
-		//ä»springå®¹å™¨è·å¾—
-		//1 è·å¾—å®¹å™¨
+		//´ÓspringÈİÆ÷»ñµÃ
+		//1 »ñµÃÈİÆ÷
 		String xmlPath = "bean-config/a_ioc/beans.xml";
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
-		//2è·å¾—å†…å®¹ --ä¸éœ€è¦è‡ªå·±newï¼Œéƒ½æ˜¯ä»springå®¹å™¨è·å¾—
+		//2»ñµÃÄÚÈİ --²»ĞèÒª×Ô¼ºnew£¬¶¼ÊÇ´ÓspringÈİÆ÷»ñµÃ
 		UserService userService = (UserService) applicationContext.getBean("userServiceId");
 		userService.addUser();
 		

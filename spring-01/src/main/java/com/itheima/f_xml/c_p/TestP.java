@@ -12,7 +12,7 @@ public class TestP {
 	
 	@Test
 	public void demo01(){
-		//ä»Žspringå®¹å™¨èŽ·å¾—
+	    //´ÓspringÈÝÆ÷»ñµÃ
 		String xmlPath = "com/itheima/f_xml/c_p/beans.xml";
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		Person person = (Person) applicationContext.getBean("personId");

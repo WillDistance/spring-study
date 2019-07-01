@@ -8,7 +8,7 @@ public class TestColl {
 	
 	@Test
 	public void demo02() throws Exception{
-		//spring å·¥åŽ‚
+		//spring ¹¤³§
 		String xmlPath = "com/itheima/f_xml/e_coll/beans.xml";
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		CollData collData = (CollData) applicationContext.getBean("collDataId");

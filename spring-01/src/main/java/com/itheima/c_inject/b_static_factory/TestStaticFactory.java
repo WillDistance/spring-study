@@ -5,20 +5,20 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * é™æ€å·¥å‚
+ * ¾²Ì¬¹¤³§
  *
  */
 public class TestStaticFactory {
 	
 	@Test
 	public void demo01(){
-		//è‡ªå®šä¹‰å·¥å‚
+		//×Ô¶¨Òå¹¤³§
 		UserService userService = MyBeanFactory.createService();
 		userService.addUser();
 	}
 	@Test
 	public void demo02(){
-		//spring å·¥å‚
+		//spring ¹¤³§
 		String xmlPath = "com/itheima/c_inject/b_static_factory/beans.xml";
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		UserService userService = applicationContext.getBean("userServiceId" ,UserService.class);

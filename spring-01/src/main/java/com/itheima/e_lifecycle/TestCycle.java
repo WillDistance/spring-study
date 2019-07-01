@@ -8,16 +8,16 @@ public class TestCycle {
 	
 	@Test
 	public void demo02() throws Exception{
-		//spring å·¥å‚
+		//spring ¹¤³§
 		String xmlPath = "com/itheima/e_lifecycle/beans.xml";
 		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		UserService userService = (UserService) applicationContext.getBean("userServiceId");
 		System.out.println(Proxy.isProxyClass(UserServiceImpl.class));
 		userService.addUser();
 		
-		//è¦æ±‚ï¼š1.å®¹å™¨å¿…é¡»closeï¼Œé”€æ¯æ–¹æ³•æ‰§è¡Œ; 2.å¿…é¡»æ˜¯å•ä¾‹çš„
+		//ÒªÇó£º1.ÈİÆ÷±ØĞëclose£¬Ïú»Ù·½·¨Ö´ĞĞ; 2.±ØĞëÊÇµ¥ÀıµÄ
 //		applicationContext.getClass().getMethod("close").invoke(applicationContext);
-		// * æ­¤æ–¹æ³•æ¥å£ä¸­æ²¡æœ‰å®šä¹‰ï¼Œå®ç°ç±»æä¾›
+		// * ´Ë·½·¨½Ó¿ÚÖĞÃ»ÓĞ¶¨Òå£¬ÊµÏÖÀàÌá¹©
 		applicationContext.close();
 		
 	}

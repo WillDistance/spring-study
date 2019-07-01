@@ -8,7 +8,7 @@ public class TestAnnoIoC {
 	
 	@Test
 	public void demo02(){
-		//ä»Žspringå®¹å™¨èŽ·å¾—
+		//´ÓspringÈÝÆ÷»ñµÃ
 		String xmlPath = "com/itheima/g_annotation/a_ioc/beans.xml";
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		UserService userService = (UserService) applicationContext.getBean("userServiceId");

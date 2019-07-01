@@ -8,7 +8,7 @@ public class TestFactory {
 	
 	@Test
 	public void demo02(){
-		//spring å·¥åŽ‚
+		//spring ¹¤³§
 		String xmlPath = "com/itheima/d_scope/beans.xml";
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		UserService userService = applicationContext.getBean("userServiceId" ,UserService.class);

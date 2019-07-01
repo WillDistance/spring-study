@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 @Controller("studentActionId")
 public class StudentAction {
 	
-	@Autowired //榛樿鎸夌収绫诲瀷
+	@Autowired //默认按照类型
 	private StudentService studentService;
 
 	public void execute() {

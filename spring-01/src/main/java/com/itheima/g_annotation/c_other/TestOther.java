@@ -8,7 +8,7 @@ public class TestOther {
 	
 	@Test
 	public void demo02(){
-		//spring å·¥åŽ‚
+		//spring ¹¤³§
 		String xmlPath = "com/itheima/g_annotation/c_other/beans.xml";
 		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		UserService userService = applicationContext.getBean("userServiceId" ,UserService.class);

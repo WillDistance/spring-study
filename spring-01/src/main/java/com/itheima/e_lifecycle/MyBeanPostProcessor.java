@@ -10,30 +10,30 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 public class MyBeanPostProcessor implements BeanPostProcessor {
 
     /**
-      postProcessBeforeInitializationæ–¹æ³•ä¼šåœ¨æ¯ä¸€ä¸ªbeanå¯¹è±¡çš„åˆå§‹åŒ–æ–¹æ³•è°ƒç”¨ä¹‹å‰å›è°ƒ
-      postProcessAfterInitializationæ–¹æ³•ä¼šåœ¨æ¯ä¸ªbeanå¯¹è±¡çš„åˆå§‹åŒ–æ–¹æ³•è°ƒç”¨ä¹‹åè¢«å›è°ƒ
-                ä¸¤ä¸ªæ–¹æ³•éƒ½è¿”å›Objectç±»å‹çš„å®ä¾‹ï¼Œè¿”å›å€¼æ—¢å¯ä»¥æ˜¯å°†å…¥å‚Object beanåŸå°ä¸åŠ¨çš„è¿”å›å‡ºå»ï¼Œä¹Ÿå¯ä»¥å¯¹å½“å‰beanè¿›è¡ŒåŒ…è£…å†è¿”å›
+      postProcessBeforeInitialization·½·¨»áÔÚÃ¿Ò»¸öbean¶ÔÏóµÄ³õÊ¼»¯·½·¨µ÷ÓÃÖ®Ç°»Øµ÷
+      postProcessAfterInitialization·½·¨»áÔÚÃ¿¸öbean¶ÔÏóµÄ³õÊ¼»¯·½·¨µ÷ÓÃÖ®ºó±»»Øµ÷
+                Á½¸ö·½·¨¶¼·µ»ØObjectÀàĞÍµÄÊµÀı£¬·µ»ØÖµ¼È¿ÉÒÔÊÇ½«Èë²ÎObject beanÔ­·â²»¶¯µÄ·µ»Ø³öÈ¥£¬Ò²¿ÉÒÔ¶Ôµ±Ç°bean½øĞĞ°ü×°ÔÙ·µ»Ø
          
-                ä»¥é€šè¿‡ new CopyOfUserServiceImpl() æ–°çš„å¯¹è±¡è¿”å› æ›¿ä»£ä¼ å…¥çš„beanå¯¹è±¡
-                æ¥å£ä¸­ä¸¤ä¸ªæ–¹æ³•ä¸èƒ½è¿”å›nullï¼Œå¦‚æœè¿”å›nullé‚£ä¹ˆåœ¨åç»­åˆå§‹åŒ–æ–¹æ³•å°†æŠ¥ç©ºæŒ‡é’ˆå¼‚å¸¸æˆ–è€…é€šè¿‡getBean()æ–¹æ³•è·å–ä¸åˆ°benaå®ä¾‹å¯¹è±¡
-                å› ä¸ºåç½®å¤„ç†å™¨ä»Spring IoCå®¹å™¨ä¸­å–å‡ºbeanå®ä¾‹å¯¹è±¡æ²¡æœ‰å†æ¬¡æ”¾å›IoCå®¹å™¨ä¸­
+                ÒÔÍ¨¹ı new CopyOfUserServiceImpl() ĞÂµÄ¶ÔÏó·µ»Ø Ìæ´ú´«ÈëµÄbean¶ÔÏó
+                ½Ó¿ÚÖĞÁ½¸ö·½·¨²»ÄÜ·µ»Ønull£¬Èç¹û·µ»ØnullÄÇÃ´ÔÚºóĞø³õÊ¼»¯·½·¨½«±¨¿ÕÖ¸ÕëÒì³£»òÕßÍ¨¹ıgetBean()·½·¨»ñÈ¡²»µ½benaÊµÀı¶ÔÏó
+                ÒòÎªºóÖÃ´¦ÀíÆ÷´ÓSpring IoCÈİÆ÷ÖĞÈ¡³öbeanÊµÀı¶ÔÏóÃ»ÓĞÔÙ´Î·Å»ØIoCÈİÆ÷ÖĞ
      */
     
     
 	@Override
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-		System.out.println("å‰æ–¹æ³• ï¼š " + beanName);
+		System.out.println("Ç°·½·¨ £º " + beanName);
 		
-		//return new CopyOfUserServiceImpl(); //æ”¹å˜beanå¯¹è±¡
+		//return new CopyOfUserServiceImpl(); //¸Ä±äbean¶ÔÏó
 		
 		return bean;
 	}
 
 	@Override
 	public Object postProcessAfterInitialization(final Object bean, String beanName) throws BeansException {
-		System.out.println("åæ–¹æ³• ï¼š " + beanName);
-		// bean ç›®æ ‡å¯¹è±¡
-		// ç”Ÿæˆ jdk ä»£ç†
+		System.out.println("ºó·½·¨ £º " + beanName);
+		// bean Ä¿±ê¶ÔÏó
+		// Éú³É jdk ´úÀí
 		return Proxy.newProxyInstance(
 					MyBeanPostProcessor.class.getClassLoader(), 
 					bean.getClass().getInterfaces(), 
@@ -41,14 +41,14 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
 						@Override
 						public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 							
-							System.out.println("------å¼€å¯äº‹åŠ¡");
+							System.out.println("------¿ªÆôÊÂÎñ");
 							
-							//å¯ä»¥é€šè¿‡method.getName() è·å–æ–¹æ³•åæ¥åˆ¤æ–­åšä¸€äº›é’ˆå¯¹æŒ‡å®šæ–¹æ³•çš„æ“ä½œ
+							//¿ÉÒÔÍ¨¹ımethod.getName() »ñÈ¡·½·¨ÃûÀ´ÅĞ¶Ï×öÒ»Ğ©Õë¶ÔÖ¸¶¨·½·¨µÄ²Ù×÷
 							
-							//æ‰§è¡Œç›®æ ‡æ–¹æ³•
+							//Ö´ĞĞÄ¿±ê·½·¨
 							Object obj = method.invoke(bean, args);
 							
-							System.out.println("------æäº¤äº‹åŠ¡");
+							System.out.println("------Ìá½»ÊÂÎñ");
 							return obj;
 						}});
 	}

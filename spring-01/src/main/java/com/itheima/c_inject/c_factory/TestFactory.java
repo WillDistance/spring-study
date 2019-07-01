@@ -8,17 +8,17 @@ public class TestFactory {
 	
 	@Test
 	public void demo01(){
-		//è‡ªå®šä¹‰å®žä¾‹å·¥åŽ‚
-		//1 åˆ›å»ºå·¥åŽ‚
+		//×Ô¶¨ÒåÊµÀý¹¤³§
+		//1 ´´½¨¹¤³§
 		MyBeanFactory myBeanFactory = new MyBeanFactory();
-		//2 é€šè¿‡å·¥åŽ‚å®žä¾‹ï¼ŒèŽ·å¾—å¯¹è±¡
+		//2 Í¨¹ý¹¤³§ÊµÀý£¬»ñµÃ¶ÔÏó
 		UserService userService = myBeanFactory.createService();
 		
 		userService.addUser();
 	}
 	@Test
 	public void demo02(){
-		//spring å·¥åŽ‚
+		//spring ¹¤³§
 		String xmlPath = "com/itheima/c_inject/c_factory/beans.xml";
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		UserService userService = applicationContext.getBean("userServiceId" ,UserService.class);

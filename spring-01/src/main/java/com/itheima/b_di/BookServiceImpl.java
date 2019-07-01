@@ -2,9 +2,9 @@ package com.itheima.b_di;
 
 public class BookServiceImpl implements BookService {
 	
-	// æ–¹å¼1ï¼šä¹‹å‰ï¼Œæ¥å£=å®ç°ç±»
+	// ·½Ê½1£ºÖ®Ç°£¬½Ó¿Ú=ÊµÏÖÀà
 //	private BookDao bookDao = new BookDaoImpl();
-	// æ–¹å¼2ï¼šæ¥å£ + setter
+	// ·½Ê½2£º½Ó¿Ú + setter
 	private BookDao bookDao;
 	public void setBookDao(BookDao bookDao) {
 		this.bookDao = bookDao;
@@ -16,7 +16,7 @@ public class BookServiceImpl implements BookService {
 	}
 
 	public BookServiceImpl() {
-		System.out.println("è¢«new äº†");
+		System.out.println("±»new ÁË");
 	}
 	
 }

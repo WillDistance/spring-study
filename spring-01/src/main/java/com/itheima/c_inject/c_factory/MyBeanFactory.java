@@ -1,13 +1,13 @@
 package com.itheima.c_inject.c_factory;
 
 /**
- * å®ä¾‹å·¥å‚,æ‰€æœ‰æ–¹æ³•éé™æ€
+ * ÊµÀı¹¤³§,ËùÓĞ·½·¨·Ç¾²Ì¬
  *
  */
 public class MyBeanFactory {
 	
 	/**
-	 * åˆ›å»ºå®ä¾‹
+	 * ´´½¨ÊµÀı
 	 * @return
 	 */
 	public UserService createService(){

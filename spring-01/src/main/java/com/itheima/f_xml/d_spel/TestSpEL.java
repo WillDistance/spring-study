@@ -8,7 +8,7 @@ public class TestSpEL {
 	
 	@Test
 	public void demo02() throws Exception{
-		//spring å·¥åŽ‚
+		//spring ¹¤³§
 		String xmlPath = "com/itheima/f_xml/d_spel/beans.xml";
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		Customer customer = (Customer) applicationContext.getBean("customerId");

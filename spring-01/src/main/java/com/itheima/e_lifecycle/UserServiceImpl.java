@@ -8,10 +8,10 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	public void myInit(){
-		System.out.println("åˆå§‹åŒ–");
+		System.out.println("³õÊ¼»¯");
 	}
 	public void myDestroy(){
-		System.out.println("é”€æ¯");
+		System.out.println("Ïú»Ù");
 	}
 
 }
